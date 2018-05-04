@@ -1,18 +1,16 @@
 package Gnutella;
-/**
- * Created by kmursi on 4/8/17.
- * this class define the neighbor structure
- */
+
 public class Neighbor {
     String neighborID;
     String neighborIP;
     int neighborPort;
 
+    //constructor to assign peerId,IP address,Port number from config file
     public Neighbor(String neighborID, String neighborIP, int neighborPort)
     {
-        this.neighborID=neighborID;                         //peer ID
-        this.neighborIP=neighborIP;                         //IP address from config file
-        this.neighborPort=neighborPort;                     //Port number from config file
+        this.neighborID=neighborID;
+        this.neighborIP=neighborIP;
+        this.neighborPort=neighborPort;
 
     }
 }

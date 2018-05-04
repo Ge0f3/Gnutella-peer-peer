@@ -7,7 +7,9 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 
-/*********************************************************************************************/
+/*
+Main function
+ */
 public class Main extends Thread {
     static final File f = new File(Main.class.getProtectionDomain().getCodeSource().getLocation().getPath()); //get the jar directory
     static File parentFolder = new File(f.getParent());                                     //get the parent folder of the jar
@@ -17,24 +19,29 @@ public class Main extends Thread {
     public static String configFile = null;                       //config file
     public static String peerIP;                                  //hold peer ip
     public static String peerPort;                                //port number
-    public static String peerID;                                  //p1, p2 or....pn
-    public static List<Neighbor> neighborList = new ArrayList();  //this list store neighbors
-    public static List<Neighbor> peersList = new ArrayList();     //this list stores the peers who are defined in the config file
-    public static List<String> files = new ArrayList();           //this list stores the registered files locally
-    public static List<FileLastUpdate> filesWatchers = new ArrayList(); //keep track the files changes
-    public static List<Message> messageTrack = new ArrayList();   //keep track the received messages
+    public static String peerID;//p1, p2 or....pn
+
+    // List to store neighborlist,peerList,files,messsageTrack
+    public static List<Neighbor> neighborList = new ArrayList();
+    public static List<Neighbor> peersList = new ArrayList();
+    public static List<String> files = new ArrayList();
+    public static List<FileLastUpdate> filesWatchers = new ArrayList();
+    public static List<Message> messageTrack = new ArrayList();
     public static boolean flag=false;
 
 
     static int port;
+    //constructor to get the port
     Main(int port)
     {
+
         this.port = port;
     }
-    /*********************************************************************************************/
+
     public static void main(String[] args) throws InterruptedException {
         String userInput;                                           //define user input variable
-        System.out.println("Enter '1'to apply the star topology or 2 for 2D-mesh topology:");
+        System.out.printf("The parent folder is %s\nThe Resource folder is %s\nThe master folder is %s \n\n",parentFolder,resourcesFolder,masterFolder);
+        System.out.println("1. To apply Star topology \n2. To apply Mesh topology: ");
         Scanner uIn = new Scanner(System.in);
         userInput =uIn.nextLine().trim();
         if(userInput.equals("1"))                                   //if user input = 1, star topology config will be loaded

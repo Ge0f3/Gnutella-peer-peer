@@ -5,7 +5,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-//PeerServer
+/*
+ *
+ * A class to have thread operation
+ * */
 class Listener extends Thread{
     int port;
     Message message;

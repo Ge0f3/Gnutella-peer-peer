@@ -1,8 +1,9 @@
 package Gnutella;
-/**
- * Created by kmursi on 4/9/17.
- * this class keep track the files update
- */
+
+/*
+ *
+ * A class to have file last update funciton
+ * */
 import java.io.File;
 public class FileLastUpdate {
     File file;

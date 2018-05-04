@@ -1,20 +1,21 @@
 package Gnutella;
-
+/*
+*
+* A class to have all file handling function
+* */
 import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-/**
- * Created by kmursi on 3/14/17.
- */
+
 public class File_Handler {
 
     ObjectOutputStream out;
     Socket socket;
 
-    /*********************************************************************************************/
+
 
     boolean isValidName(String text)   //this method used to check the validity of the file name
     {

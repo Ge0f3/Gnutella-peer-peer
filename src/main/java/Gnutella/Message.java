@@ -1,9 +1,9 @@
 package Gnutella;
 
-/**
- * Created by kmursi on 3/11/17.
- * this class define the message structure
- */
+/*
+ *
+ * A class to for creating message object
+ * */
 import java.io.Serializable;
 public class Message implements Serializable{
     String id;
